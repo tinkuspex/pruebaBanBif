@@ -32,7 +32,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -43,6 +45,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -103,5 +111,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b7bf986a-80ba-407b-baa7-2231439489bf"
   }
 }

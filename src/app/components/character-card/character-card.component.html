@@ -1,0 +1,20 @@
+<div (click)="selectCharacter()">
+    <div class="card">
+        <img [src]="character.Imagen" height="100" alt="{{ character.Nombre }}">
+        <div class="card__info">
+          <h5>{{ character.Nombre }}</h5>
+          <p>{{ character.Ocupacion }}</p>
+          
+          <!-- Aquí estamos alineando el icono con el género -->
+          <div class="card__info-gender">
+            <h5>{{ character.Genero }}</h5>
+            <span [ngClass]="getStatusClass(character.Estado)">
+                <i [class]="getStatusIcon(character.Estado)"></i>
+              </span>
+          </div>
+      
+          
+        </div>
+    
+    </div>
+</div>

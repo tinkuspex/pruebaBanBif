@@ -1,0 +1,82 @@
+.detail-container {
+    display: flex;
+    flex-direction: row; /* Mantener la disposición horizontal (imagen a la izquierda, texto a la derecha) */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenedor */
+    padding: 24px;
+    min-height: 100vh;
+    text-align: left;
+    position: relative; /* Esto es necesario para posicionar el botón arriba */
+    
+    /* Ajustes de la imagen y el contenido */
+    .detail-image-container {
+        flex: 0 0 300px; /* Ajusta la imagen a un tamaño fijo */
+        margin-right: 20px;
+        display: flex;
+        justify-content: center; /* Centra la imagen dentro de su contenedor */
+    }
+
+    .detail-image {
+        width: 100%;
+        max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .detail-info {
+        flex: 1; /* El contenido de texto puede ocupar el resto del espacio disponible */
+        max-width: 600px; /* Limita el ancho de los textos para mejor presentación */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .detail-name {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin: 8px 0;
+
+        strong {
+            margin-right: 8px; /* Espacio entre la etiqueta y el valor */
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
+
+    .history-text {
+        display: block;
+        font-size: 1rem;
+        white-space: normal; /* Permite el salto de línea si es necesario */
+        word-wrap: break-word; /* Rompe las palabras si el texto es demasiado largo */
+        margin-top: 8px;
+    }
+
+    /* Botón arriba */
+    .back-button {
+        position: absolute; /* Lo posiciona de forma absoluta */
+        top: 20px; /* Alineado con la parte superior */
+        left: 20px; /* Alineado con la izquierda */
+        font-size: 1.5rem; /* Tamaño más grande de la flecha */
+        color: #007bff;
+        background: none; /* Sin fondo */
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        transition: color 0.2s;
+        
+        &:hover {
+            color: #0056b3; /* Color al pasar el mouse sobre la flecha */
+        }
+
+        i {
+            margin-right: 8px; /* Espacio entre la flecha y el texto (si decides agregar texto) */
+        }
+    }
+}

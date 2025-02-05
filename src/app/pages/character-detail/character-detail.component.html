@@ -1,0 +1,24 @@
+<div class="detail-container">
+    <button (click)="goBack()" class="back-button">
+        <i class="fas fa-arrow-left"></i> <!-- Ícono de flecha a la izquierda -->
+    </button>
+    <div class="detail-image-container">
+        <img [src]="character.Imagen" [alt]="character.Nombre" class="detail-image" />
+    </div>
+    <div class="detail-info">
+        <h1 class="detail-name">{{ character.Nombre }}</h1>
+        <div class="detail-row">
+            <strong>Ocupación :</strong> <span>{{ character.Ocupacion }}</span>
+        </div>
+        <div class="detail-row">
+            <strong>Género:</strong> <span>{{ character.Genero }}</span>
+        </div>
+        <div class="detail-row">
+            <strong>Estado:</strong> <span>{{ character.Estado }}</span>
+        </div>
+        <div class="detail-row">
+            <strong>Historia:</strong>
+            <span class="history-text">{{ character.Historia }}</span>
+        </div>
+    </div>
+</div>

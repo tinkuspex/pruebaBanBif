@@ -1,0 +1,22 @@
+<div class="list-container">
+    <div class="search-bar">
+        <input 
+            type="text" 
+            placeholder="Buscar personaje..." 
+            [(ngModel)]="searchTerm" 
+            (input)="onSearch()"
+        />
+    </div>
+    <div class="pagination">
+        <button (click)="previousPage()" class="btn btn-primary" [disabled]="currentPage === 1">Previous</button>
+        <button (click)="nextPage()" [disabled]="objetoConsulta && !objetoConsulta.hasNextPage">Next</button>
+    </div>
+    <h1 class="list-title">Characters</h1>
+    <div class="grid">
+      <app-character-card
+        *ngFor="let character of characters"
+        [character]="character"
+      ></app-character-card>
+    </div>
+    
+</div>
