@@ -19,6 +19,13 @@ yarn.lock
 /*.sublime-workspace
 /*.sublime-project
 
+# Visual Studio
+.vs/
+/.vs2017/
+/.vs2019/
+/.vs2022/
+/.vscode/
+
 # System Files
 .DS_Store
 Thumbs.db
